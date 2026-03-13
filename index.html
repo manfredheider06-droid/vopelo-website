@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vopelo - Professionelle Webseiten für Ihr Business. Modernes Design, responsive und benutzerfreundlich.">
+    <title>Vopelo | Professionelle Webseiten</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Vopelo</div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Startseite</a></li>
+                <li><a href="#services" class="nav-link">Leistungen</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Ihre Website, professionell gestaltet</h1>
+                <p class="hero-subtitle">Wir erstellen moderne, benutzerfreundliche Webseiten, die Ihr Business zum Erfolg führen.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        Jetzt anfragen
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">
+                        Portfolio ansehen
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device-mockup">
+                    <div class="device-screen">
+                        <div class="mockup-content"><img src="imges/i.JPG" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <p class="section-subtitle">Alles was Sie für eine erfolgreiche Website brauchen</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Web Design</h3>
+                    <p>Modernes, ansprechendes Design, das Ihre Marke perfekt darstellt.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Perfekt auf allen Geräten - Desktop, Tablet, Smartphone.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Schnelle Websites</h3>
+                    <p>Optimiert für Geschwindigkeit und SEO-freundlich.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📧</div>
+                    <h3>Kontaktformulare</h3>
+                    <p>Funktionale Formulare für direkte Kommunikation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Sicherheit</h3>
+                    <p>SSL-verschlüsselt und DSGVO-konform.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Support</h3>
+                    <p>Technischer Support und Wartung für Ihre Website.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio & Vorlagen</h2>
+            <p class="section-subtitle">Entdecken Sie unsere Projektvorlagen</p>
+            
+            <div class="portfolio-grid">
+                <!-- Template 1 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span><img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;"></span>
+                            <small>1200x700 px</small>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Template: Agentur</h3>
+                        <p>Professionelle Agentur-Website mit Portfolio und Testimonials.</p>
+                        <span class="portfolio-tag">Web Design</span>
+                    </div>
+                </div>
+
+                <!-- Template 2 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Template: E-Commerce</h3>
+                        <p>Online-Shop mit Produktkatalog und Kontaktformular.</p>
+                        <span class="portfolio-tag">E-Commerce</span>
+                    </div>
+                </div>
+
+                <!-- Template 3 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Template: Dienstleistung</h3>
+                        <p>Website für Dienstleister mit Services und Preisen.</p>
+                        <span class="portfolio-tag">Dienstleistung</span>
+                    </div>
+                </div>
+
+                <!-- Template 4 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Template: Blog</h3>
+                        <p>Blog-Website mit modernem Design und Artikel-Übersicht.</p>
+                        <span class="portfolio-tag">Blog</span>
+                    </div>
+                </div>
+
+                <!-- Template 5 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Template: Restaurant</h3>
+                        <p>Restaurant-Website mit Speisekarte und Reservierung.</p>
+                        <span class="portfolio-tag">Gastronomie</span>
+                    </div>
+                </div>
+
+                <!-- Template 6 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Template: Kanzlei</h3>
+                        <p>Website für Anwaltskanzleien mit Team und Services.</p>
+                        <span class="portfolio-tag">Professionell</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Kontaktieren Sie uns</h2>
+            <p class="section-subtitle">Lassen Sie uns Ihre nächste Website zusammen erstellen</p>
+            
+            <div class="contact-wrapper">
+                <form action="https://formspree.io/f/xvgzlodz" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Betreff *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Nachricht *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Nachricht senden</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon"></div>
+                        <h4>E-Mail</h4>
+                        <p><a href="mailto:kontakt@vopelo.de">ahmedhasan@vopelo.de</a></p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"></div>
+                        <h4>Online</h4>
+                        <p>Rund um die Uhr erreichbar</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"></div>
+                        <h4>Antwort</h4>
+                        <p>Innerhalb von 24 Stunden</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Vopelo</h4>
+                    <p>Professionelle Webseiten für Ihr Business</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Startseite</a></li>
+                        <li><a href="#services">Leistungen</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vopelo. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
