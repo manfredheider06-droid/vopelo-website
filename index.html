@@ -6,22 +6,37 @@
     <meta name="description" content="Vopelo - Professionelle Webseiten für Ihr Business. Modernes Design, responsive und benutzerfreundlich.">
     <title>Vopelo | Professionelle Webseiten</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body data-lang="de">
+    <!-- THEME & LANGUAGE CONTROLS -->
+    <div class="controls-container">
+        <button class="control-btn theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="language-selector">
+            <button class="control-btn lang-btn active" data-lang="de">DE</button>
+            <button class="control-btn lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Vopelo</div>
-            <button class="hamburger" id="hamburger">
+            <div class="logo">
+                <span class="logo-icon">V</span>
+                <span class="logo-text">opelo</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Startseite</a></li>
-                <li><a href="#services" class="nav-link">Leistungen</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                <li><a href="#home" class="nav-link active" data-de="Startseite" data-en="Home">Startseite</a></li>
+                <li><a href="#services" class="nav-link" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+                <li><a href="#portfolio" class="nav-link" data-de="Portfolio" data-en="Portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
             </ul>
         </div>
     </nav>
@@ -30,13 +45,14 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Ihre Website, professionell gestaltet</h1>
-                <p class="hero-subtitle">Wir erstellen moderne, benutzerfreundliche Webseiten, die Ihr Business zum Erfolg führen.</p>
+                <div class="hero-label" data-de="Webdesign für Profis" data-en="Web Design for Professionals">Webdesign für Profis</div>
+                <h1 class="hero-title" data-de="Ihre Website,&#10;professionell gestaltet" data-en="Your Website,&#10;professionally designed">Ihre Website,<br>professionell gestaltet</h1>
+                <p class="hero-subtitle" data-de="Wir erstellen moderne, benutzerfreundliche Webseiten, die Ihr Business zum Erfolg führen." data-en="We create modern, user-friendly websites that drive your business to success.">Wir erstellen moderne, benutzerfreundliche Webseiten, die Ihr Business zum Erfolg führen.</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" data-de="Jetzt anfragen" data-en="Request Now">
                         Jetzt anfragen
                     </button>
-                    <button class="btn btn-secondary" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">
+                    <button class="btn btn-secondary" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})" data-de="Portfolio ansehen" data-en="View Portfolio">
                         Portfolio ansehen
                     </button>
                 </div>
@@ -44,49 +60,50 @@
             <div class="hero-visual">
                 <div class="device-mockup">
                     <div class="device-screen">
-                        <div class="mockup-content"><img src="imges/i.JPG" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <img src="imges/i.JPG" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
         </div>
+        <div class="hero-bg-animation"></div>
     </section>
 
     <!-- SERVICES SECTION -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Unsere Leistungen</h2>
-            <p class="section-subtitle">Alles was Sie für eine erfolgreiche Website brauchen</p>
+            <h2 class="section-title" data-de="Unsere Leistungen" data-en="Our Services">Unsere Leistungen</h2>
+            <p class="section-subtitle" data-de="Alles was Sie für eine erfolgreiche Website brauchen" data-en="Everything you need for a successful website">Alles was Sie für eine erfolgreiche Website brauchen</p>
             
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🎨</div>
-                    <h3>Web Design</h3>
-                    <p>Modernes, ansprechendes Design, das Ihre Marke perfekt darstellt.</p>
+                    <h3 data-de="Web Design" data-en="Web Design">Web Design</h3>
+                    <p data-de="Modernes, ansprechendes Design, das Ihre Marke perfekt darstellt." data-en="Modern, appealing design that perfectly represents your brand.">Modernes, ansprechendes Design, das Ihre Marke perfekt darstellt.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📱</div>
-                    <h3>Responsive Design</h3>
-                    <p>Perfekt auf allen Geräten - Desktop, Tablet, Smartphone.</p>
+                    <h3 data-de="Responsive Design" data-en="Responsive Design">Responsive Design</h3>
+                    <p data-de="Perfekt auf allen Geräten - Desktop, Tablet, Smartphone." data-en="Perfect on all devices - Desktop, Tablet, Smartphone.">Perfekt auf allen Geräten - Desktop, Tablet, Smartphone.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">⚡</div>
-                    <h3>Schnelle Websites</h3>
-                    <p>Optimiert für Geschwindigkeit und SEO-freundlich.</p>
+                    <h3 data-de="Schnelle Websites" data-en="Fast Websites">Schnelle Websites</h3>
+                    <p data-de="Optimiert für Geschwindigkeit und SEO-freundlich." data-en="Optimized for speed and SEO-friendly.">Optimiert für Geschwindigkeit und SEO-freundlich.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📧</div>
-                    <h3>Kontaktformulare</h3>
-                    <p>Funktionale Formulare für direkte Kommunikation.</p>
+                    <h3 data-de="Kontaktformulare" data-en="Contact Forms">Kontaktformulare</h3>
+                    <p data-de="Funktionale Formulare für direkte Kommunikation." data-en="Functional forms for direct communication.">Funktionale Formulare für direkte Kommunikation.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔒</div>
-                    <h3>Sicherheit</h3>
-                    <p>SSL-verschlüsselt und DSGVO-konform.</p>
+                    <h3 data-de="Sicherheit" data-en="Security">Sicherheit</h3>
+                    <p data-de="SSL-verschlüsselt und DSGVO-konform." data-en="SSL-encrypted and GDPR-compliant.">SSL-verschlüsselt und DSGVO-konform.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🚀</div>
-                    <h3>Support</h3>
-                    <p>Technischer Support und Wartung für Ihre Website.</p>
+                    <h3 data-de="Support" data-en="Support">Support</h3>
+                    <p data-de="Technischer Support und Wartung für Ihre Website." data-en="Technical support and maintenance for your website.">Technischer Support und Wartung für Ihre Website.</p>
                 </div>
             </div>
         </div>
@@ -95,92 +112,79 @@
     <!-- PORTFOLIO SECTION -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title">Portfolio & Vorlagen</h2>
-            <p class="section-subtitle">Entdecken Sie unsere Projektvorlagen</p>
+            <h2 class="section-title" data-de="Portfolio & Vorlagen" data-en="Portfolio & Templates">Portfolio & Vorlagen</h2>
+            <p class="section-subtitle" data-de="Entdecken Sie unsere Projektvorlagen" data-en="Discover our project templates">Entdecken Sie unsere Projektvorlagen</p>
             
             <div class="portfolio-grid">
-                <!-- Template 1 -->
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div class="image-placeholder">
-                            <span><img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;"></span>
-                            <small>1200x700 px</small>
-                        </div>
+                        <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="portfolio-overlay"></div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Template: Agentur</h3>
-                        <p>Professionelle Agentur-Website mit Portfolio und Testimonials.</p>
-                        <span class="portfolio-tag">Web Design</span>
+                        <h3 data-de="Template: Agentur" data-en="Template: Agency">Template: Agentur</h3>
+                        <p data-de="Professionelle Agentur-Website mit Portfolio und Testimonials." data-en="Professional agency website with portfolio and testimonials.">Professionelle Agentur-Website mit Portfolio und Testimonials.</p>
+                        <span class="portfolio-tag" data-de="Web Design" data-en="Web Design">Web Design</span>
                     </div>
                 </div>
 
-                <!-- Template 2 -->
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div class="image-placeholder">
-                            <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
+                        <img src="imges/f.jpg" alt="Projekt 2" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="portfolio-overlay"></div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Template: E-Commerce</h3>
-                        <p>Online-Shop mit Produktkatalog und Kontaktformular.</p>
-                        <span class="portfolio-tag">E-Commerce</span>
+                        <h3 data-de="Template: E-Commerce" data-en="Template: E-Commerce">Template: E-Commerce</h3>
+                        <p data-de="Online-Shop mit Produktkatalog und Kontaktformular." data-en="Online shop with product catalog and contact form.">Online-Shop mit Produktkatalog und Kontaktformular.</p>
+                        <span class="portfolio-tag" data-de="E-Commerce" data-en="E-Commerce">E-Commerce</span>
                     </div>
                 </div>
 
-                <!-- Template 3 -->
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div class="image-placeholder">
-                            <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
+                        <img src="imges/f.jpg" alt="Projekt 3" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="portfolio-overlay"></div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Template: Dienstleistung</h3>
-                        <p>Website für Dienstleister mit Services und Preisen.</p>
-                        <span class="portfolio-tag">Dienstleistung</span>
+                        <h3 data-de="Template: Dienstleistung" data-en="Template: Service">Template: Dienstleistung</h3>
+                        <p data-de="Website für Dienstleister mit Services und Preisen." data-en="Website for service providers with services and prices.">Website für Dienstleister mit Services und Preisen.</p>
+                        <span class="portfolio-tag" data-de="Dienstleistung" data-en="Service">Dienstleistung</span>
                     </div>
                 </div>
 
-                <!-- Template 4 -->
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div class="image-placeholder">
-                            <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
+                        <img src="imges/f.jpg" alt="Projekt 4" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="portfolio-overlay"></div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Template: Blog</h3>
-                        <p>Blog-Website mit modernem Design und Artikel-Übersicht.</p>
-                        <span class="portfolio-tag">Blog</span>
+                        <h3 data-de="Template: Blog" data-en="Template: Blog">Template: Blog</h3>
+                        <p data-de="Blog-Website mit modernem Design und Artikel-Übersicht." data-en="Blog website with modern design and article overview.">Blog-Website mit modernem Design und Artikel-Übersicht.</p>
+                        <span class="portfolio-tag" data-de="Blog" data-en="Blog">Blog</span>
                     </div>
                 </div>
 
-                <!-- Template 5 -->
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div class="image-placeholder">
-                            <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
+                        <img src="imges/f.jpg" alt="Projekt 5" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="portfolio-overlay"></div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Template: Restaurant</h3>
-                        <p>Restaurant-Website mit Speisekarte und Reservierung.</p>
-                        <span class="portfolio-tag">Gastronomie</span>
+                        <h3 data-de="Template: Restaurant" data-en="Template: Restaurant">Template: Restaurant</h3>
+                        <p data-de="Restaurant-Website mit Speisekarte und Reservierung." data-en="Restaurant website with menu and reservation.">Restaurant-Website mit Speisekarte und Reservierung.</p>
+                        <span class="portfolio-tag" data-de="Gastronomie" data-en="Gastronomy">Gastronomie</span>
                     </div>
                 </div>
 
-                <!-- Template 6 -->
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div class="image-placeholder">
-                            <img src="imges/f.jpg" alt="Projekt 1" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
+                        <img src="imges/f.jpg" alt="Projekt 6" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="portfolio-overlay"></div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Template: Kanzlei</h3>
-                        <p>Website für Anwaltskanzleien mit Team und Services.</p>
-                        <span class="portfolio-tag">Professionell</span>
+                        <h3 data-de="Template: Kanzlei" data-en="Template: Law Firm">Template: Kanzlei</h3>
+                        <p data-de="Website für Anwaltskanzleien mit Team und Services." data-en="Website for law firms with team and services.">Website für Anwaltskanzleien mit Team und Services.</p>
+                        <span class="portfolio-tag" data-de="Professionell" data-en="Professional">Professionell</span>
                     </div>
                 </div>
             </div>
@@ -190,54 +194,54 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Kontaktieren Sie uns</h2>
-            <p class="section-subtitle">Lassen Sie uns Ihre nächste Website zusammen erstellen</p>
+            <h2 class="section-title" data-de="Kontaktieren Sie uns" data-en="Contact Us">Kontaktieren Sie uns</h2>
+            <p class="section-subtitle" data-de="Lassen Sie uns Ihre nächste Website zusammen erstellen" data-en="Let's create your next website together">Lassen Sie uns Ihre nächste Website zusammen erstellen</p>
             
             <div class="contact-wrapper">
                 <form action="https://formspree.io/f/xaqpbqej" method="POST" class="contact-form">
                     <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name" data-de="Name" data-en="Name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="">
                     </div>
 
                     <div class="form-group">
-                        <label for="email">E-Mail *</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email" data-de="E-Mail" data-en="Email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required placeholder="">
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Telefon</label>
-                        <input type="tel" id="phone" name="phone">
+                        <label for="phone" data-de="Telefon" data-en="Phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone" placeholder="">
                     </div>
 
                     <div class="form-group">
-                        <label for="subject">Betreff *</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject" data-de="Betreff" data-en="Subject">Betreff *</label>
+                        <input type="text" id="subject" name="subject" required placeholder="">
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Nachricht *</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <label for="message" data-de="Nachricht" data-en="Message">Nachricht *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder=""></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-large">Nachricht senden</button>
+                    <button type="submit" class="btn btn-primary btn-large" data-de="Nachricht senden" data-en="Send Message">Nachricht senden</button>
                 </form>
 
                 <div class="contact-info">
                     <div class="info-item">
-                        <div class="info-icon"></div>
-                        <h4>E-Mail</h4>
-                        <p><a href="mailto:kontakt@vopelo.de">ahmedhasan@vopelo.de</a></p>
+                        <div class="info-icon">✉️</div>
+                        <h4 data-de="E-Mail" data-en="Email">E-Mail</h4>
+                        <p><a href="mailto:ahmedhasan@vopelo.de">ahmedhasan@vopelo.de</a></p>
                     </div>
                     <div class="info-item">
-                        <div class="info-icon"></div>
-                        <h4>Online</h4>
-                        <p>Rund um die Uhr erreichbar</p>
+                        <div class="info-icon">⏰</div>
+                        <h4 data-de="Online" data-en="Online">Online</h4>
+                        <p data-de="Rund um die Uhr erreichbar" data-en="Available 24/7">Rund um die Uhr erreichbar</p>
                     </div>
                     <div class="info-item">
-                        <div class="info-icon"></div>
-                        <h4>Antwort</h4>
-                        <p>Innerhalb von 24 Stunden</p>
+                        <div class="info-icon">📬</div>
+                        <h4 data-de="Antwort" data-en="Response">Antwort</h4>
+                        <p data-de="Innerhalb von 24 Stunden" data-en="Within 24 hours">Innerhalb von 24 Stunden</p>
                     </div>
                 </div>
             </div>
@@ -250,27 +254,27 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Vopelo</h4>
-                    <p>Professionelle Webseiten für Ihr Business</p>
+                    <p data-de="Professionelle Webseiten für Ihr Business" data-en="Professional websites for your business">Professionelle Webseiten für Ihr Business</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Navigation</h4>
+                    <h4 data-de="Navigation" data-en="Navigation">Navigation</h4>
                     <ul>
-                        <li><a href="#home">Startseite</a></li>
-                        <li><a href="#services">Leistungen</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
+                        <li><a href="#home" data-de="Startseite" data-en="Home">Startseite</a></li>
+                        <li><a href="#services" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+                        <li><a href="#portfolio" data-de="Portfolio" data-en="Portfolio">Portfolio</a></li>
+                        <li><a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Rechtliches</h4>
+                    <h4 data-de="Rechtliches" data-en="Legal">Rechtliches</h4>
                     <ul>
-                        <li><a href="impressum.html">Impressum</a></li>
-                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="impressum.html" data-de="Impressum" data-en="Imprint">Impressum</a></li>
+                        <li><a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Vopelo. Alle Rechte vorbehalten.</p>
+                <p>&copy; 2026 Vopelo. <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span></p>
             </div>
         </div>
     </footer>
