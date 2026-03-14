@@ -51,8 +51,10 @@ function initLanguage() {
 }
 
 function updateLanguageUI() {
+    const currentLang = localStorage.getItem('language') || 'de';
+    
     langButtons.forEach(btn => {
-        if (btn.dataset.lang === storedLang) {
+        if (btn.dataset.lang === currentLang) {
             btn.classList.add('active');
         } else {
             btn.classList.remove('active');
@@ -60,10 +62,12 @@ function updateLanguageUI() {
     });
 }
 
-function updateAllText() {
+function updateAllText(lang = null) {
+    const currentLang = lang || localStorage.getItem('language') || 'de';
+    
     const elements = document.querySelectorAll('[data-de][data-en]');
     elements.forEach(el => {
-        const text = el.getAttribute(`data-${storedLang}`);
+        const text = el.getAttribute(`data-${currentLang}`);
         if (text) {
             el.textContent = text;
         }
@@ -72,12 +76,12 @@ function updateAllText() {
     // Update form labels and placeholders
     const labels = document.querySelectorAll('label[data-de][data-en]');
     labels.forEach(label => {
-        label.textContent = label.getAttribute(`data-${storedLang}`);
+        label.textContent = label.getAttribute(`data-${currentLang}`);
     });
 
     const buttons = document.querySelectorAll('button[data-de][data-en]:not(.lang-btn):not(.control-btn)');
     buttons.forEach(btn => {
-        btn.textContent = btn.getAttribute(`data-${storedLang}`);
+        btn.textContent = btn.getAttribute(`data-${currentLang}`);
     });
 }
 
@@ -85,9 +89,12 @@ function updateAllText() {
 langButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         const selectedLang = btn.dataset.lang;
-        if (selectedLang === storedLang) return;
         
-        // Update language
+        // Get current language from localStorage (not from initial variable)
+        const currentLang = localStorage.getItem('language') || 'de';
+        if (selectedLang === currentLang) return;
+        
+        // Update language in localStorage
         localStorage.setItem('language', selectedLang);
         htmlLang.setAttribute('data-lang', selectedLang);
         
@@ -95,7 +102,7 @@ langButtons.forEach(btn => {
         document.body.style.opacity = '0.7';
         setTimeout(() => {
             updateLanguageUI();
-            updateAllText();
+            updateAllText(selectedLang); // Pass the new language
             document.body.style.opacity = '1';
         }, 150);
     });
