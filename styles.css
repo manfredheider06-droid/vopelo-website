@@ -69,15 +69,28 @@ body {
     right: 20px;
     z-index: 1001;
     display: flex;
-    gap: 12px;
+    gap: 0;
     align-items: center;
+    justify-content: center;
     background: var(--secondary);
     padding: 12px;
-    border-radius: 12px;
+    border-radius: 50%;
     border: 1px solid var(--border);
     backdrop-filter: blur(20px);
     box-shadow: var(--shadow-md);
     animation: slideInDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    width: 60px;
+    height: 60px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    flex-direction: column;
+}
+
+.controls-container:hover {
+    width: 160px;
+    height: auto;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 12px;
 }
 
 .control-btn {
@@ -95,6 +108,11 @@ body {
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
+    opacity: 0;
+}
+
+.controls-container:hover .control-btn {
+    opacity: 1;
 }
 
 .control-btn::before {
@@ -122,9 +140,19 @@ body {
     color: white;
 }
 
+.theme-toggle {
+    opacity: 1 !important;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle.rotate {
+    transform: rotate(180deg) scale(1.1);
+}
+
 .language-selector {
     display: flex;
     gap: 8px;
+    flex-direction: column;
 }
 
 .lang-btn {
@@ -881,6 +909,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
+[data-theme="dark"] .footer {
+    background: #000000;
+}
+
 .footer .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -899,12 +931,13 @@ body {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 16px;
+    color: rgba(255, 255, 255, 1);
     transition: all 0.3s ease;
 }
 
 .footer-section p {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
 }
 
@@ -917,7 +950,7 @@ body {
 }
 
 .footer-section a {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-size: 14px;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -951,7 +984,7 @@ body {
 
 .footer-bottom p {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -959,9 +992,15 @@ body {
     .controls-container {
         top: 70px;
         right: 16px;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .controls-container:hover {
+        width: 140px;
+        height: auto;
+        border-radius: 12px;
     }
 
     .control-btn {
@@ -1077,6 +1116,15 @@ body {
     .controls-container {
         top: 70px;
         right: 12px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+    }
+
+    .controls-container:hover {
+        width: 130px;
+        height: auto;
+        border-radius: 12px;
     }
 
     .control-btn {
@@ -1162,3 +1210,4 @@ body {
         gap: 24px;
     }
 }
+
