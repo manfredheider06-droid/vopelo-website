@@ -982,25 +982,45 @@ body {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     .controls-container {
-        top: 10px;
-        right: 10px;
-        gap: 8px;
-        padding: 8px;
+        position: fixed;
+        top: 70px;
+        right: 16px;
+        z-index: 998;
+        gap: 10px;
+        padding: 10px;
+        flex-direction: column;
+        width: auto;
+        align-items: center;
     }
 
     .control-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 16px;
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
     }
 
     .lang-btn {
-        padding: 6px 10px;
-        font-size: 11px;
+        padding: 8px 12px;
+        font-size: 12px;
+        font-weight: 700;
+        min-width: 40px;
+    }
+
+    .language-selector {
+        display: flex;
+        gap: 8px;
+        flex-direction: row;
     }
 
     .hamburger {
         display: flex;
+        width: 40px;
+        height: 40px;
+    }
+
+    .hamburger span {
+        width: 28px;
+        height: 2.5px;
     }
 
     .nav-menu {
@@ -1090,20 +1110,31 @@ body {
 
 @media (max-width: 480px) {
     .controls-container {
-        top: 8px;
-        right: 8px;
-        padding: 6px;
+        position: fixed;
+        top: 70px;
+        right: 12px;
+        z-index: 998;
+        gap: 10px;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .control-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 14px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
     }
 
     .lang-btn {
-        padding: 5px 8px;
-        font-size: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
+        min-width: 40px;
+    }
+
+    .language-selector {
+        display: flex;
+        gap: 8px;
     }
 
     .navbar {
@@ -1122,6 +1153,17 @@ body {
         width: 28px;
         height: 28px;
         font-size: 14px;
+    }
+
+    .hamburger {
+        display: flex;
+        width: 44px;
+        height: 44px;
+    }
+
+    .hamburger span {
+        width: 28px;
+        height: 3px;
     }
 
     .hero {
